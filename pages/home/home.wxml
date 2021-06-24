@@ -1,2 +1,28 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+
+<!-- 1.小程序的数据绑定  
+     在页面的js中的data中定义好，然后通过小胡子语法进行引用
+-->
+<view>Hello {{title}}</view>
+
+
+<!-- 2.列表渲染 wx:for 
+     如果直接只写了数组，那么默认item为当前遍历的项,index为当前项的索引
+     如果直接渲染的是对象，则默认会先转为字符串来渲染，即对象渲染出来是 "[object Object]"
+-->
+<view wx:for="{{arr}}" wx:key="{{item.id}}">{{item}}---{{index}}---{{item.name}}</view>
+
+
+<!-- 2.事件监听改变data -->
+<view>当前计数：{{cont}}</view>
+<!-- 如果变量没有定义，并不会报错，只是会显示为空白
+     只有绑定数据才使用小胡子语法，绑定方法不需要
+ -->
+<button size="mini" bindtap="fn">加1</button>
+
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息</button>
+
+<!-- <open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data>
+<open-data type="userCountry"></open-data>
+<open-data type="userCity"></open-data> -->
