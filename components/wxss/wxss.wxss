@@ -1,0 +1,15 @@
+/* components/wxss/wxss.wxss */
+
+
+/**
+  * 可以把相同类的样式抽离出去到单独的文件，在对应的页面的wxss.wxss文件中通过@import进行导入
+  */
+
+@import './style/box.wxss';
+
+.px-box {
+  width: 100px;
+  height: 100px;
+  background: red; 
+}
+

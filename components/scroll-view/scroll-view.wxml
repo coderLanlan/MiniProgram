@@ -28,3 +28,8 @@
     item-{{item}}
   </view>
 </scroll-view>
+
+
+<view class='contain'>
+  测试
+</view>

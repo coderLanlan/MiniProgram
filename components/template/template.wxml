@@ -1,0 +1,20 @@
+<!--components/template/template.wxml-->
+<!-- <text>components/template/template.wxml</text> -->
+
+
+<view>----------template------------</view>
+<!-- 
+  之前的时候小程序不支持自定义组件，为了能进行代码复用，所以有了 template
+ -->
+
+<!-- 定义模板template时要给模板起一个名：name -->
+ <template name="aa">
+    <button>按钮</button>
+    <view>测试缓解</view>
+ </template>
+
+ <!-- 只有使用了模板，模板才会渲染。在使用模板时，需要指定是哪个模板：is -->
+ <template is="aa"/>
+ <template is="aa"/>
+
+ 

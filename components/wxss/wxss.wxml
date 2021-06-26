@@ -1,0 +1,40 @@
+<!--components/wxss/wxss.wxml-->
+<!-- <text>components/wxss/wxss.wxml</text> -->
+
+
+<view class="px-box"></view>
+
+<view class="rpx-box"></view>
+
+<view>
+  {{nowTime}}
+</view>
+
+<map style="width:750rpx"></map>
+
+<button size="mini" bindtap="changeShow">切换显示</button>
+
+<view hidden="{{!show}}">
+  显示
+</view>
+
+<!-- wx:if 跟 hidden 的区别： 类似于vue中的v-if和v-show的区别 -->
+
+
+<block>
+  <!-- block标签最后并不会渲染为真实的DOM，它的作用类似与vue中的template标签/react中的<>空标签 -->
+  block组件
+</block>
+
+<!-- 循环数组给当前项个索引其别名 -->
+<!-- 一般默认当前项是 item，当前索引是 index -->
+<text wx:for="我是哈哈哈" wx:key="{{index}}">
+  {{item}} -- {{index}}
+</text>
+<!-- 小程序跟vue/react类似，也做了Diff算法，所以在遍历的时候，最好给每个元素添加key值作为Diff算法的标识 -->
+<text wx:for="测试别的" wx:for-item="val" wx:for-index="i" wx:key="{{index}}">
+ {{val}} --- {{i}}
+</text>
+
+<!-- 循环的时候给元素绑定key值，是可以优化渲染性能的 -->
+

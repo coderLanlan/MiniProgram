@@ -1,0 +1,6 @@
+.rpx-box {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: pink;
+  margin-top: 20px;
+}

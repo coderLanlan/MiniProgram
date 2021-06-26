@@ -1,5 +1,7 @@
 {
   "pages": [
+    "components/template/template",
+    "components/wxss/wxss",
     "components/scroll-view/scroll-view",
     "components/input/input",
     "components/image/image",

@@ -27,3 +27,7 @@
   background: pink;
   margin: 10px 0;
 }
+
+view {
+  color: red;
+}
