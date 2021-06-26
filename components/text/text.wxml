@@ -1,0 +1,27 @@
+<!--components/text/text.wxml-->
+
+<!-- 1.行内属性 -->
+<text>components/text/text.wxml</text>
+<text>我是text组件</text>
+
+<!-- 2.基本属性 -->
+<view>
+  <!-- selectable属性：默认让该文本长按时可以被选中，进行复制操作 -->
+  <text selectable>我可以被选中了\n</text>
+  <!-- space属性：决定文本空格的大小
+         nbsp : 一个英文字符空格，默认也是这个值
+         ensp : 半个中国文字的空格大小
+         emsp ：一个中国汉字的空格大小
+   -->
+  <text>你好 李慧珍\n</text>
+  <text space="nbsp">你好 李慧珍\n</text>
+  <text space="ensp">你好 李慧珍\n</text>
+  <text space="emsp">你好 李慧珍\n</text>
+
+  <!-- decode属性：是否解码文本
+         默认值是false，不解码，对于特殊字符，是不会自动解析的
+   -->
+  <text>5 &gt; 3  \n</text>
+  <text decode>5 &gt; 3</text>
+</view>
+

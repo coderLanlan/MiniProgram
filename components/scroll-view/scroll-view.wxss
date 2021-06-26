@@ -1,0 +1,29 @@
+/* components/scroll-view/scroll-view.wxss */
+
+
+.container1 {
+  background: red;
+  white-space: nowrap;
+}
+
+.item1 {
+  width: 100px;
+  height: 100px;
+  background: green;
+  margin: 10px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+  display: inline-block;
+}
+
+.container2 {
+  margin-top: 20px;
+  background: orange;
+  height: 300px;
+}
+.item2 {
+  height: 100px;
+  background: pink;
+  margin: 10px 0;
+}

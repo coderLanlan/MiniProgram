@@ -1,0 +1,17 @@
+<!--components/view/view.wxml-->
+<!-- <text>components/view/view.wxml</text> -->
+
+<!-- 
+  view组件：
+    1.视图组件，块级元素，独占一行，通常用作容器组件（类似于原生的div）
+    2.
+ -->
+
+<view>哈哈哈</view>
+<view>啦啦啦</view>
+
+<!-- 1.hover-class属性：长按之后的样式 -->
+<view hover-class='box' 
+      hover-start-time="1000"
+      hover-stay-time="1000"
+      class="box1">变色龙</view>

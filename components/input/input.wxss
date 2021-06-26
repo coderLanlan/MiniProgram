@@ -1,0 +1,6 @@
+/* components/input/input.wxss */
+
+input {
+  margin-top: 10px;
+  border: 1px salmon solid;
+}

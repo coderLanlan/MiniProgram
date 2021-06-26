@@ -1,0 +1,23 @@
+<!--components/image/image.wxml-->
+<!-- <text>components/image/image.wxml</text> -->
+
+
+<!-- 
+  image标签：默认是行内块元素
+    默认大小是： 320*240 并且跟机型没关系，是一个固定的大小
+ -->
+ <!-- 远程图片 -->
+<image src="https://imghtml.baoday.cn/upload/article/000/000/006/5e143de2b5f7e235.jpg"></image>
+
+<!-- 本地图片：相对地址 -->
+<image src="../../assets/tabbar/home.png"></image>
+
+
+<!-- 小程序默认根目录就是/ 所以可以直接/xx/xx 找文件 -->
+<!-- 本地图片：绝对地址 -->
+<image src="/assets/tabbar/home_active.png"></image>
+<text>哈哈呀呀呀</text>
+
+<!-- 补充：显示相册中的图片 -->
+<button bindtap="handleChooseAblum">选中图片</button>
+<image src="{{path}}"></image>

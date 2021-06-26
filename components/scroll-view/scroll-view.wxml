@@ -1,0 +1,30 @@
+<!--components/scroll-view/scroll-view.wxml-->
+<!-- <text>components/scroll-view/scroll-view.wxml</text> -->
+
+<!-- scroll-view：可以实现局部滚动 -->
+
+<!-- 1.scroll-x属性：控制横向滚动 -->
+<scroll-view class="container1" scroll-x>
+  <view wx:for="{{10}}" class="item1">
+    item-{{item}}
+  </view>
+</scroll-view>
+
+
+<!-- 2.scroll-y属性：控制纵向滚动 -->
+<scroll-view class="container2" scroll-y>
+  <view wx:for="{{10}}" class="item2">
+    item-{{item}}
+  </view>
+</scroll-view>
+
+
+<!-- 3.bindscroll属性：绑定滚动事件 -->
+<scroll-view class="container2" 
+             scroll-y 
+             bindscrolltoupper='scrollTop'
+             bindscroll='scroll'>
+  <view wx:for="{{10}}" class="item2">
+    item-{{item}}
+  </view>
+</scroll-view>

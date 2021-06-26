@@ -1,0 +1,6 @@
+/* components/button/button.wxss */
+
+.active {
+  background: red;
+  color: bisque;
+}

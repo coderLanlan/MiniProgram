@@ -1,0 +1,14 @@
+/* components/view/view.wxss */
+
+.box1 {
+  font-size: 30px;
+  background: pink; /* 注意class的编写顺序，不然有部分属性会失效 */
+}
+
+.box {
+  background: green;
+  color: wheat;
+  width: 100px;
+  height: 100px;
+}
+

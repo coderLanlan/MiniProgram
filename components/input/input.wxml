@@ -1,0 +1,39 @@
+<!--components/input/input.wxml-->
+<!-- <text>components/input/input.wxml</text> -->
+
+<!-- 1.input的基本使用 -->
+基本使用：
+<input confirm-type="search"></input>
+
+<!-- 2.value属性：设置input中的默认值 -->
+设置value：
+<input value="我是默认值"></input>
+
+<!-- 3.password属性：隐藏输入的内容 -->
+看不到内容：
+<input password></input>
+
+<!-- 4.type属性：决定键盘类型
+        text：文本键盘
+        number：数字键盘
+        idcard：身份证输入键盘
+        digit：带小数点的数字键盘    
+ -->
+数字键盘：<input type="number"></input>
+身份证键盘：
+<input type="idcard"></input>
+小数点
+<input type="digit"></input>
+
+<!-- 5.confirm-type属性：决定键盘右下角蓝色的那个按钮显示内容（只有type="text"时有效）
+       send：显示为发送
+       search：显示为搜索
+ -->
+ <input type="text" confirm-type="search"></input>
+
+
+ <view>----------input事件-------------</view>
+ <input bindinput="handleInput"
+        bindfocus="handleFocus"
+        bindblur="handleBlur"
+ />

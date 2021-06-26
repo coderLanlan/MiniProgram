@@ -1,0 +1,22 @@
+<!--components/button/button.wxml-->
+
+<!-- 1.基本用法：默认是块级元素 -->
+<button>按钮</button>
+
+<!-- 2.size属性：mini 会把按钮变为行内块元素 -->
+<button size="mini">小按钮</button>
+<button size="mini">小按钮</button>
+
+<!-- 3.type属性：按钮的样式类型 -->
+<button size="mini" type="primary">按钮</button>
+<button size="mini" type='default'>按钮</button>
+<button size="mini" type="warn">按钮</button>
+
+<!-- 4.plain属性：镂空效果 -->
+<button size="mini" type="warn" plain>按钮</button>
+
+<!-- 5.loading属性：名称前是否带 loading 图标 -->
+<button loading>加载</button>
+
+<!-- 6.hover-class属性：更改点击按钮之后的样式 -->
+<button hover-class="active">点击变色</button>
