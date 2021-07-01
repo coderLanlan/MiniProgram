@@ -1,0 +1,9 @@
+<template name="B">
+
+  <view>
+    B模板是我
+  </view>
+
+</template>
+
+我是模板外额外的内容

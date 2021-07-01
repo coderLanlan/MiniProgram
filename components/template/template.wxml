@@ -11,6 +11,7 @@
  <template name="aa">
     <button>按钮</button>
     <view>测试缓解</view>
+    <include src="./A.wxml"/>
  </template>
 
  <!-- 只有使用了模板，模板才会渲染。在使用模板时，需要指定是哪个模板：is -->
@@ -18,3 +19,34 @@
  <template is="aa"/>
 
  
+<!-- 给模板传递数据 -->
+<template name='getData'>
+  <view>
+    <!-- 默认会自动进行数据解构，直接通过属性名即可获取属性值 -->
+    显示传递的数据---{{name}}
+  </view>
+  <view>年龄是：{{age}}</view>
+</template>
+
+<template is="getData" data='{{name:"传参", age: 20}}'></template>
+
+
+<!-- 通过 import 引入外部模板 -->
+<!-- import 有作用域的概念，导入的是哪个文件，就只能使用在该文件中定义的模板，而不能使用该文件通过import导入的文件中的模板 -->
+<!-- <import src="./templateA.wxml"/> -->
+<!-- 通过 include 引入外部模板 -->
+<include src="./templateA.wxml"/>
+<!-- 使用 include 导入的是哪个文件，就只能用该文件中导入的文件中的模板，而不能使用该文件中定义的模板 -->
+<!-- <template is="A"/>
+<template is="A"/> -->
+<!-- template.wxml 中通过 import导入的模板B -->
+<template is="B"/>
+<!-- 这样直接使用模板B会报错 B not found -->
+
+
+<import src="./A.wxml"/>
+<!-- import不能引入文件？？ -->
+
+<include src="./A.wxml"/>
+<!-- include 可以导入文件，如果文件中直接就是结构，那么一旦导入就直接渲染，无需再使用其他标签 -->
+<!-- include 不一定要写在最外层，写在某个标签内部也是可以的，写在哪里，该文件中的结构就显示在哪里，可以把它动作标签使用，在哪里使用就在哪里显示 -->

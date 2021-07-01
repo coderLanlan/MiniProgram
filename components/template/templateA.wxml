@@ -1,0 +1,10 @@
+
+<import src="./templateB.wxml"/>
+
+<template name="A">
+
+  <view>
+    我是A模板
+  </view>
+
+</template>

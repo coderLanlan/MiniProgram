@@ -1,0 +1,8 @@
+function click(){
+  console.log('我是wxs函数', arguments);
+}
+
+
+module.exports = {
+  click: click
+}

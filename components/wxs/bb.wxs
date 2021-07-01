@@ -1,0 +1,6 @@
+var name = 'b模块文件';
+
+
+module.exports = {
+  a: name
+};

@@ -1,5 +1,7 @@
 {
   "pages": [
+    "components/event/event",
+    "components/wxs/wxs",
     "components/template/template",
     "components/wxss/wxss",
     "components/scroll-view/scroll-view",
@@ -15,7 +17,7 @@
     "navigationBarBackgroundColor": "#ff5777",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "我的小程序",
-    "backgroundColor": "green",
+    "backgroundColor": "#ff5777",
     "enablePullDownRefresh": false,
     "backgroundTextStyle": "light"
   }

@@ -1,0 +1,102 @@
+<!--components/event/event.wxml-->
+<!-- <text>components/event/event.wxml</text> -->
+
+<!-- 1.事件处理的回顾 -->
+<button bindtap="click">按钮1</button>
+<!-- 新写法，可以写成 bind:事件类型 -->
+<button bind:tap="click">按钮2</button>
+<button catchtap="click" data-name="实参传递">按钮3</button>
+
+<!-- 如果绑定的是WXS函数，则必须用{{}}括起来* -->
+<wxs src="./e.wxs" module="aa"/>
+<button bindtap="{{aa.click}}">按钮4</button>
+
+
+<view class="container" bindtap="tap">
+  <view class="box1">
+  
+  </view>
+  <view class="box2" id="box"
+        bindtouchstart="touchstart"
+        bindtouchmove="touchmove"
+        bindtouchend="touchend"
+        bindtap="tap"
+        bindlongpress="longpress"
+        bindlongtap="longtap"
+  />
+</view>
+<!-- 
+  事件触发顺序：
+    1.只是点击一下，会依次触发 touchstart、touchend、tap
+    2.长按点击，会依次触发 touchstart、longtap、longpress、touchend
+    3.tap事件跟longpress事件是互斥的，只会触发其中一个，不可能两个都触发
+
+ -->
+
+<!-- 
+  常见的事件类型：
+    1.touchstart：手指开始触摸时触发
+    2.touchmove：手指移动时触发
+    3.touchend：手指结束触摸时触发
+    4.tap：手指快速单击时，在触发touchend之后触发
+    5.longpress：手指长按时，在touchstart之后，touchend之前触发
+    6.longtap：也是手指长按时会触发，目前已经不推荐使用了，推荐用longpress
+
+
+
+  某些组件会有属于自己的特性事件类型：
+    + input的 bindinput、bindblur、bindfocus等
+    + scroll-view的 bindscrolltowpper、bindscrolltolower等
+    + ......
+
+
+  事件绑定（bind、catch）
+    1.以 bind+事件名称，或者 bind:+事件名称。比如 bindtap等同于 bind:tap，使用bind进行事件绑定的方式不会阻止事件冒泡
+    2.以 catch+事件名称，或者 catch:+事件名称，比如 catchtap等同于 catch:tap。使用catch会阻止事件冒泡
+ -->
+
+
+ <!-- 
+    事件对象的分析 
+      + type：事件类型
+      + timeStamp：事件发生时的时间戳
+      + target：触发事件的组件的一些属性集合
+      + currentTarget：当前组件的一些属性值集合
+      + mark：事件标记数据
+      + detail：额外的信息（button的点击事件里有具体的点击位置）
+      + touches：触摸事件，当前{停留}在屏幕中的触摸点信息的数组。它是用来记录当前有几个手指在小程序触摸的，以及每一个触摸点的信息
+      + changedTouches：触摸事件，当前{变化}的触摸点信息的数组。它是用来记录当前变化的手指的触摸点的信息
+
+
+    touches和changesTouches的区别：
+      1.touches是用来记录当前有几个手指在小程序触摸的，以及每一个触摸点的信息；而changedTouches是用来记录当前变化的手指的触摸点的信息。
+        例如，当触发touchend时，事件对象中的touches是空数组（此时没有手指触摸），changedTouches有一个元素（发生变化的只有一个手指）
+
+-->
+
+
+<!-- 
+  事件的传递参数（给事件的回调函数进行传参）
+    使用的是自定义属性： data-属性名 = 属性值
+    获取实参： e.target.dataset.属性名
+
+ -->
+
+ <view>---------------事件的参数传递--------------------</view>
+ <view class="big">
+   <block wx:for="{{arr}}" wx:key="index">
+     <view class="item" bindtap="getItem" data-name="{{item}}" data-index="{{index}}">
+      <!-- 这里是把当前项item和当前索引index传递给方法getItem -->
+      <!-- 其中 data- 是固定写法 -->
+      {{item}}
+     </view>
+   </block>
+ </view>
+
+
+
+ <!-- 
+   事件冒泡和事件捕获
+     触摸类事件支持捕获阶段： capture-bind:事件名=方法   capture-catch:事件名=方法
+     区别： catch可以阻止事件传递，而bind不会阻止事件的冒泡/捕获
+  -->

@@ -1,0 +1,68 @@
+<!--components/wxs/wxs.wxml-->
+<!-- <text>components/wxs/wxs.wxml</text> -->
+
+
+<!-- 
+  WXS（WeinXin Script）：
+    WXS是小程序的一套脚本语言，结合wxml，可以构建出页面的结构。
+    WXS与javascript是不同的语言，它有自己的语法，并不和javascript一样（不过基本一致）
+
+  为什么要设计WXS语言呢？
+    在wxml中，是不能直接调用Page中(相关页面的.js文件)定义的函数的，但是在某些情况下，我们希望可以通过调用函数来处理wxml中的数据（类似于vue中的过滤器），这个时候就需要用到WXS了
+  
+  WXS使用的限制和特点
+    1.WXS的运行环境和其他javascript代码是隔离的，wxs文件中不能调用其他js文件中定义的函数，也不能调用小程序提供的API
+    2.wxs函数不能作为组件的事件回调，也就是不能让组件/标签的事件绑定的是wxs方法
+
+
+ -->
+
+
+
+<!-- wxs的定义方式一：写在 <wxs>标签中
+     想要wxs生效，必须要有module属性（可赋值，也可不赋值，不过一般推荐赋值）
+     module属性，给wxs起名字，方便在wxml中调用
+ -->
+<wxs module="info">
+  // 在这里写js代码，所有注释只能是通过 //
+ var a = 13;
+
+
+
+ // 如果想要该wxs模块中的变量被外界使用，需要使用commonJs将数据导出
+
+  // 只有导出变量才可以在wxml中通过 moduleName.xx 进行调用
+  module.exports = {
+    // 不能使用es6语法，会报错
+    // a 报错，必须要写完整
+    a:a 
+  }
+</wxs>
+
+ <view>
+   原来的数据：{{34.83297357895}}
+ </view>
+
+ <!-- 希望把数据保留小数点后两位 -->
+ <view>
+   <!-- 错误写法 -->
+   <!-- 保留两位小数：{{34.83297357895.toFixed(2)}} -->
+   <!-- 会报错，wxml不能在模板中直接调用方法 -->
+ </view>
+
+ <view>
+   获取wxs中的变量：{{info.a}}
+ </view>
+
+
+ <!-- 导入wxs文件也是通过 wxs标签 不过需要注意的是src只能是相对地址，绝对地址会报错-->
+ <!-- <wxs src="/components/wxs/info.wxs" module='aa'/> -->
+
+<!-- 导入的时候记得也要添加 module属性哦 -->
+ <wxs src="./info.wxs" module="aa"/>
+ <view>
+   {{aa.a}}
+   <view>
+     10+43 = {{aa.sum(10,34)}}
+   </view>
+ </view>

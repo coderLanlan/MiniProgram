@@ -1,0 +1,30 @@
+// wxs定义方式二：单独抽离到 .wxs 文件中（推荐）
+
+// wxs 中不能使用es6语法，所以定义变量只能用var和function
+
+var a = '我是在wxs文件中定义并导出的';
+var b = 9787;
+
+
+// 这里面的所有方法想要在被调用之后有新的数据，那就必须在函数体中return值出去
+
+function sum(n1, n2) {
+  return n1 + n2;
+}
+
+
+
+
+// 记得导出哦
+module.exports = {
+  a:a,
+  sum: sum
+}
+
+
+// 如果在这里想要引用其他 wxs 文件模块，可以使用 require 函数
+// 只能引入 .wxs 的文件
+// 文件路径只能使用相对路径
+
+var aa = require('./bb.wxs');
+console.log(aa.a)
