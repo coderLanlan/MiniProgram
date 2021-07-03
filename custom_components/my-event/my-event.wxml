@@ -1,0 +1,12 @@
+<!--custom_components/my-event/my-event.wxml-->
+<!-- <text>custom_components/my-event/my-event.wxml</text> -->
+
+
+<view class="my-title"> 当前count为：{{count}}</view>
+
+<button bindtap="add" data-count="{{10}}">count++</button>
+
+<view>
+  组件内部的num: {{num}}
+</view>
+

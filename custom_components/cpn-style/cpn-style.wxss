@@ -1,0 +1,21 @@
+/* custom_components/cpn-style/cpn-style.wxss */
+
+
+.title {
+  font-size: 50rpx;
+  font-weight: 700;
+
+  /* 如果设置了 color，那么就以组件内部设置的为主，否则沿用页面的设置（前提样式隔离的属性值为apply-shared） */
+  /* color: red; */  
+}
+
+/* 自定义组件内的不允许使用 id选择器、属性选择器、标签选择器 */
+
+/* :host {
+  color: yellow;
+} */
+
+/* 
+  组件内部使用 :host 选择器，可以给该组件节点设置组件的默认样式
+
+*/

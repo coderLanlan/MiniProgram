@@ -1,0 +1,21 @@
+/* custom_components/my-tab/my-tab.wxss */
+
+.box {
+  display: flex;
+  height: 100rpx;
+  /* background-color: orange; */
+  align-items:center;
+}
+
+.item {
+  flex: 1;
+  text-align: center;
+}
+
+.active {
+  color: palevioletred
+}
+
+.atext {
+  border-bottom: 6rpx solid palevioletred;
+}

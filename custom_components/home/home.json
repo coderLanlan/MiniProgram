@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "my-cpn-1": "/custom_components/my-cpn/my-cpn",
+    "cpn-style": "/custom_components/cpn-style/cpn-style",
+    "my-prop": "/custom_components/my-prop/my-prop",
+    "my-event": "/custom_components/my-event/my-event",
+    "my-tab": "/custom_components/my-tab/my-tab",
+    "my-slot": "/custom_components/my-slot/my-slot"
+  }
+}

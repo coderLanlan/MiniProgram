@@ -1,0 +1,7 @@
+<!--custom_components/cpn1/cpn1.wxml-->
+<!-- <text>custom_components/cpn1/cpn1.wxml</text> -->
+
+
+<view>
+  我是cpn1
+</view>

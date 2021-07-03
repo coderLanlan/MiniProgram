@@ -1,0 +1,13 @@
+<!--custom_components/my-slot/my-slot.wxml-->
+<!-- <text>custom_components/my-slot/my-slot.wxml</text> -->
+
+
+<view>
+  插槽的使用
+  <slot></slot>
+  <view>
+    <slot name="title">
+      我是默认值
+    </slot>
+  </view>
+</view>

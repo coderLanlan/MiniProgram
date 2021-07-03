@@ -1,6 +1,16 @@
 {
   "pages": [
-    "custom_components/home/home"
+    "components/event/event",
+    "components/wxs/wxs",
+    "components/template/template",
+    "components/wxss/wxss",
+    "components/scroll-view/scroll-view",
+    "components/input/input",
+    "components/image/image",
+    "components/view/view",
+    "components/button/button",
+    "components/text/text"
+    
   ],
   "sitemapLocation": "sitemap67.json",
   "window": {

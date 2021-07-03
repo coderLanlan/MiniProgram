@@ -1,0 +1,16 @@
+<!--custom_components/my-cpn/my-cpn.wxml-->
+<!-- <text>custom_components/my-cpn/my-cpn.wxml</text> -->
+
+<view class="title">
+  {{title}}
+</view>
+<view class="content">
+  我是自定义组件的内容
+</view>
+
+<cpn1/>
+
+<!-- ！注意：自定义组件的命名只能是小写字母、中划线、下划线和数字的组合，除此之外，不接受其他字符 -->
+<!-- ！注意：自定义组件的名字不能是以 wx- 开头，否则会报错 -->
+
+<!-- 全局自定义组件：在app.json中进行注册即可 -->

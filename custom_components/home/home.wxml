@@ -1,0 +1,77 @@
+<!--custom_components/home/home.wxml-->
+<!-- <text>custom_components/home/home.wxml</text> -->
+
+
+<!--
+  页面使用自定义组件的步骤：
+    1.在页面的json进行中组件注册
+       组件名：组件路径（相对路径或者绝对路径都可以）
+    2.在页面的wxml中使用组件
+       <组件名></组件名>
+ -->
+
+
+<!-- 1.自定义组件的基本使用 -->
+<!-- <view>--------1.自定义组件的基本使用---------</view>
+<my-cpn-1/>
+<my-cpn-1></my-cpn-1> -->
+
+
+<!-- 2.自定义组件的样式细节 -->
+<view class="title">我是原始标签</view>
+<cpn-style/>
+
+
+
+<!-- 3.给自定义组件传递数据 -->
+<!-- 
+   组件和页面通信
+     数据：properties
+     样式：externalClass
+     标签：slot
+ -->
+<my-prop title='我传值了'/>
+
+
+
+<view style="color: green">------------------------</view>
+<!-- 4.给自定义组件传递样式 -->
+<my-prop title='测试传递样式' my-style="my-style"/>
+<view>------------------</view>
+<my-prop class="title" style="color: orange"/>
+<!-- 直接给组件设置class/行内样式，默认会影响整个组件 -->
+
+
+
+
+<!-- 4.触发组件的自定义事件并传递数据 -->
+<my-event my-title="my-title" 
+          count="{{count}}"
+          class="my_event"
+          bind:handeladd="handeladd"/>
+<button bindtap="handlenum">修改组件的num</button>
+
+
+
+<!-- 5.综合练习 -->
+<my-tab arr="{{arr}}" bind:itemclick="handelclick"/>
+
+
+
+
+<!-- 6.插槽的使用 -->
+<my-slot>
+  我是页面传递的内容
+  <view slot="title">
+     啥也没有
+  </view>
+</my-slot>
+
+
+
+
+
+
+
+
+<!-- <button id="btn">按钮</button> -->

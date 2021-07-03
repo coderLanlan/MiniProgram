@@ -1,0 +1,17 @@
+<!--custom_components/my-tab/my-tab.wxml-->
+<!-- <text>custom_components/my-tab/my-tab.wxml</text> -->
+
+<view class="box">
+  <block wx:for="{{arr}}" wx:key="index">
+    <view class="item {{index == current ? 'active': ''}}"
+          bind:tap="handle"
+          data-index="{{index}}"
+    >
+      
+      <text class="{{index == current ? 'atext': ''}}">
+        {{item}}
+      </text>
+  </view>
+  </block>
+  
+</view>

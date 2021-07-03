@@ -1,0 +1,27 @@
+/* custom_components/home/home.wxss */
+
+#btn {
+  color: red;
+}
+
+.title {
+  color: green;
+  font-size: 50rpx;
+}
+
+/* view {
+  border: 1px solid orange;
+} */
+
+
+/* 传递给自定义组件的样式 */
+.my-style {
+  color: red;
+}
+
+.my-title {
+  font-size: 50rpx;
+  font-weight: 700;
+  width: 700rpx;
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+/* custom_components/my-cpn/my-cpn.wxss */
+
+
+/* 
+  自定义组件内不允许使用 id选择器、标签选择器、属性选择器
+*/

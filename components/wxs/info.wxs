@@ -27,4 +27,4 @@ module.exports = {
 // 文件路径只能使用相对路径
 
 var aa = require('./bb.wxs');
-console.log(aa.a)
+// console.log(aa.a)
